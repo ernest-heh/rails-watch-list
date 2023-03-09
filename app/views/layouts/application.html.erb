@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsWatchList</title>
+    <title>Cineflix</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,12 +11,28 @@
   </head>
 
   <body>
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <div class="container-fluid">
-        <%= link_to "HOME", lists_path %>
+    <nav class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <div class="container">
+        <span class="logo"><%= link_to "CINEFLIX", lists_path %></span>
+        <button class="btn-cineflix"><%= link_to "New List", new_list_path(@list) %></button>
       </div>
+    </nav>
+    <div class="container my-5">
+      <%= yield %>
     </div>
-
-    <%= yield %>
+    <footer class="footer">
+      <div class="container">
+        <div class="social-icons-wrapper">
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-spotify"></i></a></li>
+        </ul>
+        </div>
+        ©2023 Cineflix Ltd.
+      </div>
+    </footer>
   </body>
 </html>

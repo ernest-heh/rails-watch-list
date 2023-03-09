@@ -1,16 +1,16 @@
-<h1><%= @list.name %></h1>
+<h1 class="border-bottom border-dark mb-3"><%= @list.name %> Movies</h1>
+<button class="btn-cineflix"><%= link_to "Add a Movie", new_list_bookmark_path(@list) %></button>
 
-<h3>Movies:</h3>
-<% @bookmarks.each do |bookmark| %>
-  <ul>
-    <li>
-      <%= bookmark.movie.title %>
-      <%= link_to bookmark, data: {turbo_method: :delete, turbo_confirm: "Delete #{bookmark.movie.title}?"} do %>
+<div class="row">
+  <% @bookmarks.each do |bookmark| %>
+    <div class="col-md-4 py-4 border-bottom border-dark">
+      <img src="<%= bookmark.movie.poster_url %>" alt="" style="width: 100%;">
+      <h2 class="mt-4"><%= bookmark.movie.title %></h2>
+      <span class="movie-rating">Rating: <%= bookmark.movie.rating %></span>
+      <p><%= bookmark.movie.overview %></p>
+      <button class="btn-cineflix mb-2"><%= link_to bookmark, data: {turbo_method: :delete, turbo_confirm: "Delete #{bookmark.movie.title}?"} do %>
         Delete
-      <% end %>
-    </li>
-  </ul>
-<% end %>
-
-<br>
-<%= link_to "add a bookmark", new_list_bookmark_path(@list) %>
+      <% end %></button>
+    </div>
+  <% end %>
+</div>

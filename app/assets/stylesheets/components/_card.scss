@@ -1,0 +1,31 @@
+.card-row {
+  margin: 2rem 0;
+}
+
+.card-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-family: $titles-font;
+  border-radius: 0.5rem;
+}
+
+.card-list a {
+  text-decoration: none;
+  color: $light-gray;
+  font-weight: 700;
+  transition: 300ms;
+}
+
+.card-list a:hover {
+  color: $gray;
+  background-color: $acid;
+}
+
+.movie-rating {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+  background-color: $acid;
+}

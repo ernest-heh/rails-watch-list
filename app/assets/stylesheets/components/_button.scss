@@ -1,0 +1,19 @@
+.btn-cineflix {
+  padding: 0.1rem 0.7rem;
+  border: 1px solid $gray;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  // letter-spacing: 0.05rem;
+  font-size: 0.9rem;
+  transition: 300ms;
+}
+
+.btn-cineflix a {
+  text-decoration: none;
+  color: $gray;
+}
+
+.btn-cineflix:hover {
+  background-color: #e6feb9;
+}

@@ -1,13 +1,13 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1581785735604-419514e6099e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80);">
+<div class="banner" style="background-image: linear-gradient(rgba(255,250,249,0.2),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1462715412043-8d09205be605?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);">
   <div class="container">
-    <h1>Movies</h1>
+    <h1>Explore & Discover Your Favourite Movies</h1>
   </div>
 </div>
 
-
-<% @lists.each do |list| %>
-  <h1><%= link_to list.name, list_path(list) %></h1>
-<% end %>
-
-<br>
-<%= link_to "New List", new_list_path(@list) %>
+<div class="row g-3 card-row">
+  <% @lists.each do |list| %>
+    <div class="col-lg-4 card-list" style="background-image: linear-gradient(rgba(255,250,249,0.1),rgba(0,0,0,0.6)), url(<%= list.image_url %>); background-size: cover;">
+      <h1><%= link_to list.name, list_path(list) %></h1>
+    </div>
+  <% end %>
+</div>

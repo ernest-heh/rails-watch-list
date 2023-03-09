@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: $oatmeal;
+}
