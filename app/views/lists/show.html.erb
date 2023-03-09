@@ -5,7 +5,7 @@
   <ul>
     <li>
       <%= bookmark.movie.title %>
-      <%= link_to list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Delete #{bookmark.movie.title}?"} do %>
+      <%= link_to bookmark, data: {turbo_method: :delete, turbo_confirm: "Delete #{bookmark.movie.title}?"} do %>
         Delete
       <% end %>
     </li>
