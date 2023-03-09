@@ -3,5 +3,4 @@ class Movie < ApplicationRecord
   has_many :lists, through: :bookmarks
 
   validates :title, :overview, uniqueness: true, presence: true
-  validates :poster_url, presence: true
 end
