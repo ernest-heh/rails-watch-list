@@ -1,3 +1,10 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1581785735604-419514e6099e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80);">
+  <div class="container">
+    <h1>Movies</h1>
+  </div>
+</div>
+
+
 <% @lists.each do |list| %>
   <h1><%= link_to list.name, list_path(list) %></h1>
 <% end %>

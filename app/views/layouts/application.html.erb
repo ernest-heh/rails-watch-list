@@ -11,9 +11,12 @@
   </head>
 
   <body>
-    <nav>
-      <%= link_to "Home", lists_path %>
-    </nav>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <div class="container-fluid">
+        <%= link_to "HOME", lists_path %>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
