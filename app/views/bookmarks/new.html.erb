@@ -1,6 +1,8 @@
-<h1 class="border-bottom border-dark mb-5"><%= @list.name %>: Add a Movie</h1>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment, label: 'Comment' %>
-  <%= f.submit "Add" %>
-<% end %>
+<div class="container my-5">
+  <h1 class="border-bottom border-dark mb-5"><%= @list.name %>: Add a Movie</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
+    <%= f.input :comment, label: 'Comment' %>
+    <%= f.submit "Add" %>
+  <% end %>
+</div>

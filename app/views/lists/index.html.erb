@@ -4,10 +4,14 @@
   </div>
 </div>
 
-<div class="row g-3 card-row">
-  <% @lists.each do |list| %>
-    <div class="col-lg-4 card-list" style="background-image: linear-gradient(rgba(255,250,249,0.1),rgba(0,0,0,0.6)), url(<%= list.image_url %>); background-size: cover;">
-      <h1><%= link_to list.name, list_path(list) %></h1>
-    </div>
-  <% end %>
+<div class="container my-5">
+  <div class="row gx-3 card-row">
+    <% @lists.each do |list| %>
+      <div class="col-lg-4" style="padding: 0.5rem;">
+        <div class="card-list" style="background-image: linear-gradient(rgba(255,250,249,0.1),rgba(0,0,0,0.6)), url(<%= list.image_url %>); background-size: cover;">
+          <h1><%= link_to list.name, list_path(list) %></h1>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
