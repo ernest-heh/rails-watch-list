@@ -1,5 +1,12 @@
-<div class="container my-5">
-  <h1 class="border-bottom border-dark mb-5"><%= @list.name %>: Add a Movie</h1>
+<nav class="navbar navbar-expand-sm navbar-light navbar-lewagon-black fixed-top">
+  <div class="container">
+    <span class="logo"><%= link_to "CINEFLIX", lists_path %></span>
+    <button class="btn-cineflix"><%= link_to "Create List", new_list_path(@list) %></button>
+  </div>
+</nav>
+
+<div class="container my-5 w-50">
+  <h1 class="border-bottom border-dark mb-5 pb-2 pt-5"><%= @list.name %>: Add a Movie</h1>
   <%= simple_form_for [@list, @bookmark] do |f| %>
     <%= f.association :movie %>
     <%= f.input :comment, label: 'Comment' %>

@@ -1,3 +1,10 @@
+<nav class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
+  <div class="container">
+    <span class="logo"><%= link_to "CINEFLIX", lists_path %></span>
+    <button class="btn-cineflix"><%= link_to "Create List", new_list_path(@list) %></button>
+  </div>
+</nav>
+
 <div class="banner" style="background-image: linear-gradient(rgba(255,250,249,0.2),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1462715412043-8d09205be605?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);">
   <div class="container">
     <h1>Explore & Discover Your Favourite Movies</h1>

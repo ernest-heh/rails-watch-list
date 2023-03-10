@@ -1,3 +1,10 @@
+<nav class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
+  <div class="container">
+    <span class="logo"><%= link_to "CINEFLIX", lists_path %></span>
+    <button class="btn-cineflix"><%= link_to "Create List", new_list_path(@list) %></button>
+  </div>
+</nav>
+
 <div class="banner" style="height: 20vh; background-image: linear-gradient(rgba(255,250,249,0.2),rgba(0,0,0,0.4)), url(<%= cl_image_path @list.photo.key, width: 1200, crop: :fill %>);">
 </div>
 
